@@ -19,7 +19,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+              - name: Setup Ninja
+                uses: ashutoshvarma/setup-ninja@v1.1
+            
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: git clone --depth=1 https://github.com/llvm/llvm-project.git
